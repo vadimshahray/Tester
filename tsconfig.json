@@ -1,3 +1,33 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "types": ["react-native"],
+    "lib": ["es2019"],
+    "noEmit": true,
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "jsx": "react-native",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@assets": ["src/assets"],
+      "@components": ["src/components"],
+      "@hooks": ["src/hooks"],
+      "@screens": ["src/screens"],
+      "@selectors": ["src/selectors"],
+      "@slices": ["src/slices"],
+      "@storage": ["src/storage"],
+      "@styles": ["src/styles"],
+      "@utils": ["src/utils"]
+    }
+  },
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
 }

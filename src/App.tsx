@@ -17,6 +17,7 @@ import {
   View,
 } from 'react-native'
 
+import RNBootSplash from 'react-native-bootsplash'
 import {
   Colors,
   DebugInstructions,
@@ -31,6 +32,8 @@ type SectionProps = PropsWithChildren<{
 
 function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
+  RNBootSplash.hide({ fade: true, duration: 400 })
+
   return (
     <View style={styles.sectionContainer}>
       <Text
